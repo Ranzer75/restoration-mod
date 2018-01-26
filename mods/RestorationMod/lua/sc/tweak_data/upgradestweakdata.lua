@@ -127,7 +127,7 @@ function UpgradesTweakData:_init_pd2_values()
 	--set new values between basic SC and vanilla--
 	if Global.game_settings and Global.game_settings.single_player then
 		self.values.team.crew_add_health = {4}
-		self.values.team.crew_add_armor = {2.5}
+		self.values.team.crew_add_armor = {1.5}
 		self.values.team.crew_add_dodge = {0.03}
 		self.values.team.crew_add_concealment = {2}
 		self.values.team.crew_add_stamina = {50}
