@@ -24,9 +24,9 @@ function UpgradesTweakData:_init_pd2_values()
 	self.explosive_bullet.feedback_range = self.explosive_bullet.range
 	self.explosive_bullet.camera_shake_max_mul = 4
 
-	--Restoring movement penalties--
-	self.weapon_movement_penalty.minigun = 0.8
-	self.weapon_movement_penalty.lmg = 0.8
+	--Undid movement penalties--
+	self.weapon_movement_penalty.minigun = 1
+	self.weapon_movement_penalty.lmg = 1
 
 	end
 
@@ -115,7 +115,8 @@ function UpgradesTweakData:_init_pd2_values()
 		5
 	}
 
-	self.values.rep_upgrades.values = {0}
+	--restored skill points--
+	self.values.rep_upgrades.values = {2}
 
 	--Custom stuff for SC's mod, mainly suppression resistance and stuff--
     	self.values.player.suppression_resist = {true}
@@ -123,17 +124,18 @@ function UpgradesTweakData:_init_pd2_values()
     	self.values.player.health_revive_max = {true}
     	self.values.player.yakuza_berserker = {true}
 	--Bot boost stuff stuff--
+	--set new values between basic SC and vanilla--
 	if Global.game_settings and Global.game_settings.single_player then
-		self.values.team.crew_add_health = {2}
-		self.values.team.crew_add_armor = {1}
-		self.values.team.crew_add_dodge = {0.02}
-		self.values.team.crew_add_concealment = {1}
-		self.values.team.crew_add_stamina = {25}
+		self.values.team.crew_add_health = {4}
+		self.values.team.crew_add_armor = {2.5}
+		self.values.team.crew_add_dodge = {0.03}
+		self.values.team.crew_add_concealment = {2}
+		self.values.team.crew_add_stamina = {50}
 		self.values.team.crew_reduce_speed_penalty = {1}
-		self.values.team.crew_health_regen = {0.1}
-		self.values.team.crew_throwable_regen = {150}
-		self.values.team.crew_faster_reload = {1.1}
-		self.values.team.crew_faster_swap = {1}	
+		self.values.team.crew_health_regen = {0.5}
+		self.values.team.crew_throwable_regen = {50}
+		self.values.team.crew_faster_reload = {1.2}
+		self.values.team.crew_faster_swap = {1.2}	
 	else
 		self.values.team.crew_add_health = {0}
 		self.values.team.crew_add_armor = {0}
@@ -158,15 +160,15 @@ function UpgradesTweakData:_init_pd2_values()
 	self.values.team.crew_scavenge = {
 		{
 			0.05,
-			0.05,
-			0.05
+			0.10,
+			0.15
 		}
 	}
 	self.values.team.crew_interact = {
 		{
 			0.9,
-			0.9,
-			0.9
+			0.85,
+			0.8
 		}
 	}
 	self.values.team.crew_ai_ap_ammo = {true}
@@ -181,11 +183,12 @@ function UpgradesTweakData:_init_pd2_values()
 					{1.25, 15}
 				}
 				self.revive_health_multiplier = {1.3}
+				--+5% reduction, +2 seconds--
 				self.values.temporary.revive_damage_reduction = {{
-					0.9,
-					5
+					0.85,
+					7
 				}}
-				self.values.player.revive_damage_reduction = {0.9}
+				self.values.player.revive_damage_reduction = {0.85}
 				
 				--Quick Fix
 				self.values.first_aid_kit.deploy_time_multiplier = {0.5}
@@ -212,10 +215,11 @@ function UpgradesTweakData:_init_pd2_values()
 				self.values.cooldown.long_dis_revive = {
 					{1, 30}
 				}
+				--restored reload speed bonus--
 				self.morale_boost_speed_bonus = 1.2
 				self.morale_boost_suppression_resistance = 1
 				self.morale_boost_time = 10
-				self.morale_boost_reload_speed_bonus = 1
+				self.morale_boost_reload_speed_bonus = 1.2
 				self.morale_boost_base_cooldown = 3.5
 			--}
 			
@@ -265,16 +269,18 @@ function UpgradesTweakData:_init_pd2_values()
 			--[[   ASSAULT SUBTREE   ]]--
 			--{
 				--Leadership--
-				self.values.smg.recoil_index_addend = {1}
-				self.values.team.weapon.recoil_index_addend = {1}
+				--+8 stability--
+				self.values.smg.recoil_index_addend = {2}
+				self.values.team.weapon.recoil_index_addend = {2}
 
 				--MG Handling (Rifleman)
 				self.values.smg.reload_speed_multiplier = {1.25}
 				self.values.smg.hip_fire_spread_multiplier = {0.5}
 
 				--MG Specialist (Marksman)
+				--+5% SMG damage mult--
 				self.values.smg.fire_rate_multiplier = {1.2}
-				self.values.smg.damage_multiplier = {1.15}
+				self.values.smg.damage_multiplier = {1.2}
 				
 				--Shock and Awe
 				self.values.weapon.clip_ammo_increase = {1.3, 1.5}
@@ -315,6 +321,7 @@ function UpgradesTweakData:_init_pd2_values()
 				self.values.shotgun.hip_rate_of_fire = {1.35}
 				
 				--Overkill
+				--changed basic overkill from 2 sec to 6--
 				self.values.shotgun.swap_speed_multiplier = {1.8}
 				self.values.saw.swap_speed_multiplier = {1.8}
 				self.values.temporary.overkill_damage_multiplier = {
@@ -326,11 +333,13 @@ function UpgradesTweakData:_init_pd2_values()
 			--[[   ARMORER SUBTREE   ]]--
 			--{
 				--Stun Resistance
+				--75% flashbang res--
 				self.values.player.damage_shake_addend = {1}
-				self.values.player.flashbang_multiplier = {0.5, 0.25}
+				self.values.player.flashbang_multiplier = {0.25, 0.25}
 				
 				--Die Hard
-				self.values.player.armor_regen_timer_multiplier = {0.9}
+				--+5% armor regen
+				self.values.player.armor_regen_timer_multiplier = {0.85}
 				self.values.player.primary_weapon_when_downed = {true}
 
 				--Transporter
@@ -463,9 +472,10 @@ function UpgradesTweakData:_init_pd2_values()
 				self.values.player.steelsight_when_downed = {true}
 	
 				--Sharpshooter
-				self.values.weapon.single_spread_index_addend = {1}
-				self.values.assault_rifle.recoil_index_addend = {1}
-				self.values.snp.recoil_index_addend = {1}
+				--+10 acc, +8 stab--
+				self.values.weapon.single_spread_index_addend = {2}
+				self.values.assault_rifle.recoil_index_addend = {2}
+				self.values.snp.recoil_index_addend = {2}
 				self.sharpshooter_categories = {
 					"assault_rifle",
 					"smg",
@@ -473,8 +483,9 @@ function UpgradesTweakData:_init_pd2_values()
 				}
 
 				--Spotter
+				--+5% damage moved here from Cleaner--
 				self.values.player.marked_enemy_extra_damage = {true}
-				self.values.player.marked_enemy_damage_mul = 1.15
+				self.values.player.marked_enemy_damage_mul = 1.20
 				self.values.player.marked_inc_dmg_distance = {{2500, 1.25}}
 				
 				--Kilmer
@@ -849,7 +860,8 @@ function UpgradesTweakData:_init_pd2_values()
 	}
 	
 	--Hey you're getting your grinder on my grinder
-	self.values.player.level_5_armor_addend = {-7}
+	--testing less penalty on flakjak--
+	self.values.player.level_5_armor_addend = {-4}
 	self.damage_to_hot_data = {
 		armors_allowed = {"level_5"},
 		works_with_armor_kit = true,
