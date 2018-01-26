@@ -211,21 +211,21 @@ function SkillTreeTweakData:init(tweak_data)
 			--[[   CONTROLLER SUBTREE   ]]--
 			--{
 
-			--Cable Guy, formerly Endurance (WHY?)--
+			--Cable Guy, formerly Endurance (stamina boost first)--
 			self.skills.triathlete = {
 				["name_id"] = "menu_triathlete_beta_sc",
 				["desc_id"] = "menu_triathlete_beta_desc_sc",
 				["icon_xy"] = {4, 7},
 				[1] = {
 					upgrades = {
-						"cable_tie_quantity"
+						"player_stamina_multiplier",
+						"team_stamina_multiplier"
 					},
 					cost = self.costs.default
 				},
 				[2] = {
 					upgrades = {
-						"player_stamina_multiplier",
-						"team_stamina_multiplier"
+					"cable_tie_quantity"
 					},
 					cost = self.costs.pro
 				}
@@ -589,20 +589,20 @@ function SkillTreeTweakData:init(tweak_data)
 			--[[   ARMORER SUBTREE   ]]--
 			--{
 
-			--Stun Resistance--
+			--Stun Resistance (swapped steadiness and flashbang res)--
 			self.skills.oppressor = {
 				["name_id"] = "menu_oppressor_beta_sc",
 				["desc_id"] = "menu_oppressor_beta_desc_sc",
 				["icon_xy"] = {6, 1},
 				[1] = {
 					upgrades = {
-						"player_damage_shake_addend"
+						"player_flashbang_multiplier_2"
 					},
 					cost = self.costs.default
 				},
 				[2] = {
 					upgrades = {
-						"player_flashbang_multiplier_2"
+						"player_damage_shake_addend"
 					},
 					cost = self.costs.pro
 				}
@@ -955,7 +955,7 @@ function SkillTreeTweakData:init(tweak_data)
 			--[[   BREACHER SUBTREE   ]]--
 			--{
 
-			--Hardware Expert--
+			--Hardware Expert (silent drilling 1 point, 10% chance of autorepair moved from Kick Starter)--
 			self.skills.hardware_expert = {
 				["name_id"] = "menu_hardware_expert_beta_sc",
 				["desc_id"] = "menu_hardware_expert_beta_desc_sc",
@@ -963,13 +963,14 @@ function SkillTreeTweakData:init(tweak_data)
 				[1] = {
 					upgrades = {
 						"player_drill_fix_interaction_speed_multiplier",
+						"player_drill_alert",
+						"player_silent_drill"
 					},
 					cost = self.costs.default
 				},
 				[2] = {
 					upgrades = {
-						"player_drill_alert",
-						"player_silent_drill"
+						"player_drill_autorepair_1",
 					},
 					cost = self.costs.pro
 				}
@@ -1037,14 +1038,13 @@ function SkillTreeTweakData:init(tweak_data)
 				}
 			}
 
-			--Kickstarter--
+			--Kickstarter (only 20% autorepair on basic now)--
 			self.skills.kick_starter = {
 				["name_id"] = "menu_kick_starter_beta",
 				["desc_id"] = "menu_kick_starter_beta_desc_sc",
 				["icon_xy"] = {9, 8},
 				[1] = {
 					upgrades = {
-						"player_drill_autorepair_1",
 						"player_drill_autorepair_2"
 					},
 					cost = self.costs.hightier
@@ -1122,20 +1122,22 @@ function SkillTreeTweakData:init(tweak_data)
 				}
 			}
 
-			--Spotter--
+			--Spotter (auto-highlight/mark duration moved here)--
 			self.skills.fire_control = {
 				["name_id"] = "menu_fast_fire_beta_sc",
 				["desc_id"] = "menu_fast_fire_beta_desc_sc",
 				["icon_xy"] = {8, 2},
 				[1] = {
 					upgrades = {
-						"player_marked_enemy_extra_damage"
+						"player_marked_enemy_extra_damage",
+						"weapon_steelsight_highlight_specials"
 					},
 					cost = self.costs.hightier
 				},
 				[2] = {
 					upgrades = {
-						"player_marked_inc_dmg_distance_1"
+						"player_marked_inc_dmg_distance_1",
+						"player_mark_enemy_time_multiplier"
 					},
 					cost = self.costs.hightierpro
 				}
@@ -1247,8 +1249,7 @@ function SkillTreeTweakData:init(tweak_data)
 				[2] = {
 					upgrades = {
 						"bodybags_bag_quantity",
-						"player_cleaner_cost_multiplier",
-						"weapon_special_damage_taken_multiplier"
+						"player_cleaner_cost_multiplier"
 					},
 					cost = self.costs.pro
 				}
@@ -1291,8 +1292,6 @@ function SkillTreeTweakData:init(tweak_data)
 					upgrades = {
 						"player_pick_lock_hard",
 						"player_pick_lock_easy_speed_multiplier",
-						"weapon_steelsight_highlight_specials",
-						"player_mark_enemy_time_multiplier",
 					},
 					cost = self.costs.hightierpro
 				}
