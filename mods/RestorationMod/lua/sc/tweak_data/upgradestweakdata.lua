@@ -333,8 +333,8 @@ function UpgradesTweakData:_init_pd2_values()
 			--[[   ARMORER SUBTREE   ]]--
 			--{
 				--Stun Resistance
-				--75% flashbang res--
-				self.values.player.damage_shake_addend = {1}
+				--75% flashbang res, double steadiness--
+				self.values.player.damage_shake_addend = {2}
 				self.values.player.flashbang_multiplier = {0.25, 0.25}
 				
 				--Die Hard
