@@ -1,3 +1,3 @@
-# Restoration Mod
+# Ranzeration Mod
 
-Modification for PAYDAY 2.
+A personal branch of SC's Restoration Mod. Used for coding practice.
