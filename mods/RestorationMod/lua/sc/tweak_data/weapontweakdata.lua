@@ -998,7 +998,7 @@ if SC and SC._data.sc_ai_toggle or restoration and restoration.Options:GetValue(
 	end
 
 	function WeaponTweakData:_init_data_peacemaker_crew()
-		self.maker_crew.sounds.prefix = "pmkr45_npc"
+		self.peacemaker_crew.sounds.prefix = "pmkr45_npc"
 		self.peacemaker_crew.use_data.selection_index = 1
 		self.peacemaker_crew.DAMAGE = 14.1
 		self.peacemaker_crew.muzzleflash = "effects/payday2/particles/weapons/9mm_auto"
