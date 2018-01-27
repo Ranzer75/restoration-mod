@@ -3178,7 +3178,6 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.g36.panic_suppression_chance = 0.0
 			
 		--P90--
-		self.p90.desc_id = "bm_ap_weapon_sc_desc"
 		self.p90.AMMO_MAX = 180
 		self.p90.AMMO_PICKUP = self:_pickup_chance(180, 1)
 		self.p90.fire_mode_data.fire_rate = 0.06666666666
@@ -3193,10 +3192,11 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.p90.kick.standing = self.new_m4.kick.standing
 		self.p90.kick.crouching = self.new_m4.kick.standing
 		self.p90.kick.steelsight = self.new_m4.kick.standing
-		self.lemming.can_shoot_through_enemy = true
-        	self.lemming.can_shoot_through_shield = true
-        	self.lemming.can_shoot_through_wall = true
-        	self.lemming.armor_piercing_chance = 1
+		self.p90.can_shoot_through_enemy = true
+        	self.p90.can_shoot_through_shield = true
+        	self.p90.can_shoot_through_wall = true
+        	self.p90.armor_piercing_chance = 1
+		self.p90.desc_id = "bm_ap_weapon_sc_desc"
 		self.p90.stats = {
 			damage = 36,
 			spread = 14,
