@@ -998,7 +998,7 @@ if SC and SC._data.sc_ai_toggle or restoration and restoration.Options:GetValue(
 	end
 
 	function WeaponTweakData:_init_data_peacemaker_crew()
-		self.peacemaker_crew.sounds.prefix = "pmkr45_npc"
+		self.maker_crew.sounds.prefix = "pmkr45_npc"
 		self.peacemaker_crew.use_data.selection_index = 1
 		self.peacemaker_crew.DAMAGE = 14.1
 		self.peacemaker_crew.muzzleflash = "effects/payday2/particles/weapons/9mm_auto"
@@ -3191,8 +3191,12 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.p90.kick.standing = self.new_m4.kick.standing
 		self.p90.kick.crouching = self.new_m4.kick.standing
 		self.p90.kick.steelsight = self.new_m4.kick.standing
+		self.lemming.can_shoot_through_enemy = true
+        	self.lemming.can_shoot_through_shield = true
+        	self.lemming.can_shoot_through_wall = true
+        	self.lemming.armor_piercing_chance = 1
 		self.p90.stats = {
-			damage = 22,
+			damage = 36,
 			spread = 14,
 			recoil = 23,
 			spread_moving = 9,
@@ -6581,7 +6585,7 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		}
 		self.coal.panic_suppression_chance = 0.1
 			
-		--5/7 AP--
+		--5/7 AP (readded AP, bumped damage and stats)--
 		self.lemming.CLIP_AMMO_MAX = 20
 		self.lemming.AMMO_MAX = 180
 		self.lemming.AMMO_PICKUP = self:_pickup_chance(180, 1)
@@ -6597,17 +6601,17 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.lemming.kick.crouching = self.glock_17.kick.standing
 		self.lemming.kick.steelsight = self.glock_17.kick.standing
 		self.lemming.panic_suppression_chance = 0.0
-		self.lemming.can_shoot_through_enemy = false
-		self.lemming.can_shoot_through_shield = false
-		self.lemming.can_shoot_through_wall = false
-		self.lemming.armor_piercing_chance = 0
+		self.lemming.can_shoot_through_enemy = true
+		self.lemming.can_shoot_through_shield = true
+		self.lemming.can_shoot_through_wall = true
+		self.lemming.armor_piercing_chance = 1
 		self.lemming.stats = {
-			damage = 25,
-			spread = 14,
-			recoil = 22,
+			damage = 32,
+			spread = 15,
+			recoil = 20,
 			spread_moving = 9,
 			zoom = 3,
-			concealment = 30,
+			concealment = 28,
 			suppression = 9,
 			alert_size = 9,
 			extra_ammo = 6,
