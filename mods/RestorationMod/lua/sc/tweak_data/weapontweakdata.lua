@@ -2662,7 +2662,7 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 				weap.stats.total_ammo_mod = 100
 			end
 		end
-
+			
 		--CAR-4--
 		self.new_m4.desc_id = "bm_menu_sc_m4_desc"
 		self.new_m4.AMMO_MAX = 150
@@ -2681,8 +2681,9 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 			-1,
 			1
 		}
+		--damage up from 29 to 40--
 		self.new_m4.stats = {
-			damage = 29,
+			damage = 40,
 			spread = 14,
 			recoil = 19,
 			spread_moving = 7,
@@ -2702,7 +2703,7 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.glock_17.fire_mode_data.fire_rate = 0.075
 		self.glock_17.single.fire_rate = 0.075
 		self.glock_17.AMMO_MAX = 150
-		self.glock_17.CLIP_AMMO_MAX = 18
+		self.glock_17.CLIP_AMMO_MAX = 19
 		self.glock_17.AMMO_PICKUP = self:_pickup_chance(self.glock_17.AMMO_MAX, 1)
 		self.glock_17.spread.standing = 3.5
 		self.glock_17.spread.crouching = 2.5
@@ -2768,7 +2769,8 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 			
 		--Reinfeld 880--
 		self.r870.desc_id = "bm_menu_sc_r870_desc"
-		self.r870.rays = 9
+		--buffed Reinfeld by adding 3 more pellets--
+		self.r870.rays = 12
 		self.r870.CLIP_AMMO_MAX = 8
 		self.r870.spread.standing = 3.5
 		self.r870.spread.crouching = 2.5
@@ -2885,9 +2887,9 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.m16.spread.moving_crouching = 3
 		self.m16.spread.moving_steelsight = 2
 		self.m16.stats = {
-			damage = 41,
-			spread = 16,
-			recoil = 17,
+			damage = 51,
+			spread = 18,
+			recoil = 18,
 			spread_moving = 5,
 			zoom = 4,
 			concealment = 21,
@@ -2978,7 +2980,7 @@ if SC and SC._data.sc_player_weapon_toggle or restoration and restoration.Option
 		self.akm.stats = {
 			damage = 53,
 			spread = 16,
-			recoil = 18,
+			recoil = 20,
 			spread_moving = 6,
 			zoom = 3,
 			concealment = 13,
