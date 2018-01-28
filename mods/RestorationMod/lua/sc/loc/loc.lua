@@ -32,6 +32,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization", function(loc)
 		["bm_wp_upg_quad2_desc"] = "",
 		["bm_ap_weapon_mod_sc_desc"] = "ADDS BODY ARMOR PENETRATION, SHIELD PENETRATION, AND WALL PENETRATION.",
 		["bm_ap_weapon_sc_desc"] = "CAN PENETRATE BODY ARMOR, SHIELDS, AND THIN WALLS.",
+		["bm_ap_weapon_57_desc"] = "5.7mm AMMUNITION PIERCES BODY ARMOR, BUT HAS LOW STOPPING POWER.",
 		["bm_m203_weapon_sc_desc"] = "Press the [Bipod Key/Alt-Fire Key] to switch to the mounted Grenade Launcher.",
 		["bm_40mm_weapon_sc_desc"] = "Press the [Gadget Key] to toggle Flip Up Sight.",
 		["bm_ap_2_weapon_sc_desc"] = "CAN PENETRATE BODY ARMOR, ARROWS CAN BE RESTORED BY PICKING THEM UP, AND RANGE INCREASES THE LONGER AN ARROW IS DRAWN.",
@@ -110,9 +111,9 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization", function(loc)
 		["bm_wp_p90_body_p90_tan"] = "Tan Body",
 		
 		--More fitting descriptions of difficulties--
-		["menu_risk_elite"] = "DEATH WISH. FOR YOU, ACTION IS THE JUICE.",
-		["menu_risk_sm_wish"] = "Fo Sho.",
-		["menu_difficulty_sm_wish"] = "Crackdown"
+		["menu_risk_elite"] = "DEATH WISH. GENSEC ELITE HAS BEEN DISPATCHED.",
+		["menu_risk_sm_wish"] = "ONE DOWN. THE ZEAL TEAM AWAITS.",
+		["menu_difficulty_sm_wish"] = "One Down",
 
 		["bm_melee_katana_info"] = "While playing as Jiro, killing a Cloaker with a charged attack triggers a special kill animation.",
 		
@@ -295,40 +296,40 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 		["bm_menu_skill"] = "Crew Boosts",
 
 		["menu_crew_interact"] = "Quick",
-		["menu_crew_interact_desc"] = "Players interact 10% faster.\n\nNote: Pager response is not affected by this boost.",
+		["menu_crew_interact_desc"] = "Players interact 10% faster. Adds 5% for each bot to a max of 20%.\n\nNote: Pager response is not affected by this boost.",
 
 		["menu_crew_inspire"] = "Inspiring",
 		["menu_crew_inspire_desc"] = "Bots equipped with this ability can now use the Inspire aced ability.\n\nThey cannot do this more than once every 30 seconds.",
 
 		["menu_crew_scavenge"] = "Sharpeyed",
-		["menu_crew_scavenge_desc"] = "Players pickup 5% more ammunition.",
+		["menu_crew_scavenge_desc"] = "Players pickup 5% more ammunition. Adds 5% for each bot to a max of 15%.",
 
 		["menu_crew_ai_ap_ammo"] = "Piercing",
 		["menu_crew_ai_ap_ammo_desc"] = "Your team AI will now use armor piercing rounds. This enables them to shoot through armor.",
 
 		["menu_crew_healthy"] = "Reinforcer",
-		["menu_crew_healthy_desc"] = "Players' health is increased by 20.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_healthy_desc"] = "Players' health is increased by 40.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_sturdy"] = "Protector",
-		["menu_crew_sturdy_desc"] = "Players' armor is increased by 10.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_sturdy_desc"] = "Players' armor is increased by 15.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_evasive"] = "Distractor",
-		["menu_crew_evasive_desc"] = "Players' dodge is increased by 2.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_evasive_desc"] = "Players' dodge is increased by 3.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_motivated"] = "Invigorator",
-		["menu_crew_motivated_desc"] = "Players have 25 more stamina.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_motivated_desc"] = "Players have 50 more stamina.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_regen"] = "Healer",
-		["menu_crew_regen_desc"] = "Players heal 1 health every 5 seconds.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_regen_desc"] = "Players heal 5 health every 5 seconds.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_quiet"] = "Concealer",
 		["menu_crew_quiet_desc"] = "Players gain 3 more concealment.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_generous"] = "Stockpiler ",
-		["menu_crew_generous_desc"] = "Players are granted an extra throwable for every 150 kills.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_generous_desc"] = "Players are granted an extra throwable for every 50 kills.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_crew_eager"] = "Accelerator",
-		["menu_crew_eager_desc"] = "Players reload 10% faster.\n\nNote: This Boost only works in Crime.net Offline.",
+		["menu_crew_eager_desc"] = "Players reload and swap weapons 20% faster.\n\nNote: This Boost only works in Crime.net Offline.",
 
 		["menu_risk_dv"] = "Death Vox",
 		["menu_difficulty_dv"] = "Death Vox",
@@ -343,7 +344,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Combat Medic
 			["menu_combat_medic_beta_sc"] = "Combat Medic",
-			["menu_combat_medic_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain a ##10%## damage reduction for ##5## seconds both after and during reviving another player.\n\nACE: ##$pro##\nReviving a crew member gives them ##30%## more health.",
+			["menu_combat_medic_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain a ##15%## damage reduction for ##7## seconds both after and during reviving another player.\n\nACE: ##$pro##\nReviving a crew member gives them ##30%## more health.",
 			
 			--Quick Fix
 			["menu_tea_time_beta_sc"] = "Quick Fix",
@@ -363,7 +364,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Inspire
 			["menu_inspire_beta_sc"] = "Inspire",
-			["menu_inspire_beta_desc_sc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster. Shouting at your teammates will increase their movement speed by ##20%## for ##10## seconds.\n\nACE: ##$pro##\nThere is a ##100%## chance that you can revive crew members at a distance by shouting at them. This cannot occur more than once every ##30## seconds.",																								
+			["menu_inspire_beta_desc_sc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster. Shouting at your teammates will increase their movement and reload speed by ##20%## for ##10## seconds.\n\nACE: ##$pro##\nThere is a ##100%## chance that you can revive crew members at a distance by shouting at them. This cannot occur more than once every ##30## seconds.",																								
 
 
 			--}
@@ -373,7 +374,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 	
 			--Cable Guy
 			["menu_triathlete_beta_sc"] = "Cable Guy",
-			["menu_triathlete_beta_desc_sc"] = "BASIC: ##$basic##\nIncreases your supply of cable ties by ##4##.\n\nACE: ##$pro##\nIncreases your stamina by ##150%## and your crew's stamina by ##50%.##",																								
+			["menu_triathlete_beta_desc_sc"] = "BASIC: ##$basic##\nIncreases your stamina by ##150%## and your crew's stamina by ##50%##.\n\nACE: ##$pro##\nIncreases your supply of cable ties by ##4##.",																								
 
 			--Clowns are Scary
 			["menu_cable_guy_beta_sc"] = "Clowns are Scary",
@@ -403,7 +404,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Leadership
 			["menu_stable_shot_beta_sc"] = "Leadership",	
-			["menu_stable_shot_beta_desc_sc"] = "BASIC: ##$basic##\nYour stability rating for all SMGs and LMGs is increased by ##4.##\n\nACE: ##$pro##\nYou and your crew's stability rating for all weapons is increased by ##4.##",
+			["menu_stable_shot_beta_desc_sc"] = "BASIC: ##$basic##\nYour stability rating for all SMGs and LMGs is increased by ##8.##\n\nACE: ##$pro##\nYou and your crew's stability rating for all weapons is increased by ##8.##",
 
 			--MG Handling
 			["menu_scavenger_sc"] = "MG Handling",	
@@ -455,7 +456,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Overkill
 			["menu_overkill_sc"] = "OVERKILL",
-			["menu_overkill_desc_sc"] = "BASIC: ##$basic##\nWhen you kill an enemy using a shotgun or the OVE9000 portable saw, you receive a ##75%## damage boost for ##2## seconds.\n\nNote: Does not apply to grenade launchers.\n\nACE: ##$pro##\nThe damage bonus now applies to all weapons and lasts ##10## seconds. Skill must still be activated using a shotgun or the OVE9000 portable saw.\n\nDecreases the time it takes to pull and put away shotguns and the saw by ##80%##.",
+			["menu_overkill_desc_sc"] = "BASIC: ##$basic##\nWhen you kill an enemy using a shotgun or the OVE9000 portable saw, you receive a ##75%## damage boost for ##6## seconds.\n\nNote: Does not apply to grenade launchers.\n\nACE: ##$pro##\nThe damage bonus now applies to all weapons and lasts ##10## seconds. Skill must still be activated using a shotgun or the OVE9000 portable saw.\n\nDecreases the time it takes to pull and put away shotguns and the saw by ##80%##.",
 
 			--}
 			
@@ -464,11 +465,11 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Stun Resistance--
 			["menu_oppressor_beta_sc"] = "Stun Resistance",
-			["menu_oppressor_beta_desc_sc"] = "BASIC: ##$basic##\nYour steadiness is increased by ##10.##\n\nACE: ##$pro##\nReduces the visual effect duration of Flashbangs by ##50%.##",
+			["menu_oppressor_beta_desc_sc"] = "BASIC: ##$basic##\nReduces the visual effect duration of flashbangs by ##75%##.\n\nACE: ##$pro##\nYour steadiness is increased by ##20.##",
 
 			--Die Hard
 			["menu_show_of_force_sc"] = "Die Hard",
-			["menu_show_of_force_desc_sc"] = "BASIC: ##$basic##\nYou can use your primary weapon in bleedout.\n\nACE: ##$pro##\nYour armor recovers ##10%## faster.",																																																																																																																																																																																																
+			["menu_show_of_force_desc_sc"] = "BASIC: ##$basic##\nYou can use your primary weapon in bleedout.\n\nACE: ##$pro##\nYour armor recovers ##15%## faster.",																																																																																																																																																																																																
 			
 			--Transporter
 			["menu_pack_mule_beta_sc"] = "Transporter",
@@ -555,7 +556,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--Hardware Expert--
 			["menu_hardware_expert_beta_sc"] = "Hardware Expert",
-			["menu_hardware_expert_beta_desc_sc"] = "BASIC: ##$basic##\nYou fix drills and saws ##50%## faster.\n\nACE: ##$pro##\nYour drills and saws are now silent. Civilians and guards have to see the drill or saw in order to get alerted.",																								
+			["menu_hardware_expert_beta_desc_sc"] = "BASIC: ##$basic##\nYou fix drills and saws ##50%## faster. Drills you place or repair are also ##silent##, requiring line of sight to detect.\n\nACE: ##$pro##\nYour drills and saws have a ##10%## chance to automatically repair themselves when broken.",																								
 
 			--Danger Close
 			["menu_trip_mine_expert_beta_sc"] = "Danger Close",
@@ -563,11 +564,11 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--More Firepower--
 			["menu_more_fire_power_sc"] = "Demoman",
-			["menu_more_fire_power_desc_sc"] = "BASIC: ##$basic##\nYou can now carry ##4## shaped charges and ##6## trip mines.\n\nACE: ##$pro##\nYou can now carry ##6## shaped charges and ##10## trip mines.",																								
+			["menu_more_fire_power_desc_sc"] = "BASIC: ##$basic##\nYou can now carry ##4## shaped charges and ##6## trip mines.\n\nYou deploy shaped charges and trip mines ##20%## faster.\n\nACE: ##$pro##\nYou can now carry ##6## shaped charges and ##10## trip mines.\n\nYou deploy shaped charges and trip mines an additional ##20%## faster.",																								
 
 
 			--Kickstarter
-			["menu_kick_starter_beta_desc_sc"] = "BASIC: ##$basic##\nYour drills and saws gain a ##30%## chance to automatically restart after breaking.\n\nACE: ##$pro##\nYou gain the ability to restart a drill by hitting it with a melee attack. You get ##1## chance for each time it breaks with a ##50%## success rate.",
+			["menu_kick_starter_beta_desc_sc"] = "BASIC: ##$basic##\nYour drills and saws gain an additional ##20%## chance to automatically restart after breaking.\n\nACE: ##$pro##\nYou gain the ability to restart a drill by hitting it with a melee attack. You get ##1## chance for each time it breaks with a ##50%## success rate.",
 
 
 			--}
@@ -645,7 +646,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 		--Sharpshooter--
 		["menu_discipline_sc"] = "Sharpshooter",
-		["menu_discipline_desc_sc"] = "BASIC: ##$basic##\nYour weapon accuracy is increased with weapons set to semi-auto by ##5.##\n\nACE: ##$pro##\nYour weapon stability is increased with all rifles by ##4.##",
+		["menu_discipline_desc_sc"] = "BASIC: ##$basic##\nYour weapon accuracy is increased with weapons set to semi-auto by ##10.##\n\nACE: ##$pro##\nYour weapon stability is increased with all rifles by ##8.##",
 
 		--Kilmer--	
 		["menu_heavy_impact_beta_sc"] = "Kilmer",
@@ -653,7 +654,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 		--Spotter--	
 		["menu_fast_fire_beta_sc"] = "Spotter",
-		["menu_fast_fire_beta_desc_sc"] = "BASIC: ##$basic##\nSpecial enemies marked by you take ##15%## more damage.\n\nACE: ##$pro##\nEnemies you mark take an additional ##25%## damage when further away than ##25## meters.",																																																																																																																																																																																																																									
+		["menu_fast_fire_beta_desc_sc"] = "BASIC: ##$basic##\nSpecial enemies marked by you take ##20%## more damage. You can also now automatically mark special enemies by ##scoping in## on them.\n\nACE: ##$pro##\nEnemies you mark take an additional ##25%## damage when further away than ##25## meters. Your marks on enemies last ##100%## longer.",																																																																																																																																																																																																																									
 
 		--Nerves of Steel--
 		["menu_kilmer_sc"] = "Nerves of Steel",
@@ -673,7 +674,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 		--Cleaner--
 		["menu_cleaner_beta_sc"] = "Cleaner",
-		["menu_cleaner_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##1## additional body bag in your inventory.\n\nACE: ##$pro##\nYou gain the ability to place ##2## body bag cases and you ##no longer have cleaner costs## when killing a civilian.\n\nYou deal ##5%## more damage against special enemies.",	
+		["menu_cleaner_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##1## additional body bag in your inventory.\n\nACE: ##$pro##\nYou gain the ability to place ##2## body bag cases and you ##no longer have cleaner costs## when killing a civilian.",	
 																																																																																																																																																																																																																								
 		--Sixth Sense--
 		["menu_chameleon_beta_sc"] = "Sixth Sense",
@@ -681,7 +682,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 		--Nimble--
 		["menu_second_chances_beta_sc"] = "Nimble",
-		["menu_second_chances_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain the ability disable ##1## camera from detecting you and your crew. Effect lasts for ##25## seconds.\n\nACE: ##$pro##\nYou lockpick ##75%## faster and now you can ##lockpick safes.##\n\nThe duration of marked enemies is increased by ##100%## and you can now mark specials by aiming at them with any weapon.",	
+		["menu_second_chances_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain the ability disable ##1## camera from detecting you and your crew. Effect lasts for ##25## seconds.\n\nACE: ##$pro##\nYou pick all locks and handcuffs ##75%## faster and now you can ##lockpick safes.##",	
 
 		--ECM Specialist--
 		["menu_ecm_2x_beta_sc"] = "ECM Specialist",
