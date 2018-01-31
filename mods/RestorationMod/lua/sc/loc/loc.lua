@@ -32,6 +32,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization", function(loc)
 		["bm_wp_upg_quad2_desc"] = "",
 		["bm_ap_weapon_mod_sc_desc"] = "ADDS BODY ARMOR PENETRATION, SHIELD PENETRATION, AND WALL PENETRATION.",
 		["bm_ap_weapon_sc_desc"] = "CAN PENETRATE BODY ARMOR, SHIELDS, AND THIN WALLS.",
+		["bm_ap_weapon_57_desc"] = "5.7mm AMMUNITION PIERCES BODY ARMOR, BUT HAS LOW STOPPING POWER.",
 		["bm_m203_weapon_sc_desc"] = "Press the [Bipod Key/Alt-Fire Key] to switch to the mounted Grenade Launcher.",
 		["bm_40mm_weapon_sc_desc"] = "Press the [Gadget Key] to toggle Flip Up Sight.",
 		["bm_ap_2_weapon_sc_desc"] = "CAN PENETRATE BODY ARMOR, ARROWS CAN BE RESTORED BY PICKING THEM UP, AND RANGE INCREASES THE LONGER AN ARROW IS DRAWN.",
@@ -401,20 +402,20 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			--[[   ASSAULT SUBTREE, FORMERLY SHARPSHOOTER   ]]--
 			--{
 
-			--Leadership
-			["menu_stable_shot_beta_sc"] = "Leadership",	
+			--Tight Grip (formerly Leadership)
+			["menu_stable_shot_beta_sc"] = "Tight Grip",	
 			["menu_stable_shot_beta_desc_sc"] = "BASIC: ##$basic##\nYour stability rating for all SMGs and LMGs is increased by ##8.##\n\nACE: ##$pro##\nYou and your crew's stability rating for all weapons is increased by ##8.##",
 
 			--MG Handling
 			["menu_scavenger_sc"] = "MG Handling",	
 			["menu_scavenger_desc_sc"] = "BASIC: ##$basic##\nTightens the hipfire accuracy of SMGs and LMGs by ##50%##\n\nACE: ##$pro##\nYou reload SMGs and LMGs ##25%## faster.",
 
-			--MG Specialist
-			["menu_sharpshooter_sc"] = "MG Specialist",	
+			--Full Auto (formerly MG Specialist)
+			["menu_sharpshooter_sc"] = "Full Auto",	
 			["menu_sharpshooter_desc_sc"] = "BASIC: ##$basic##\nIncreases the rate of fire of SMGs and LMGs by ##20%.##\n\nACE: ##$pro##\nYour SMGs and LMGs do ##15%## more damage.",
 
-			--Shock and Awe
-			["menu_spotter_teamwork_beta_sc"] = "Shock and Awe",
+			--Last Action Hero (formerly Shock and Awe)
+			["menu_spotter_teamwork_beta_sc"] = "Last Action Hero",
 			["menu_spotter_teamwork_beta_desc_sc"] = "BASIC: ##$basic##\nYour weapons' magazine sizes are increased by ##30%.##\n\nACE: ##$pro##\nYou can now hip-fire with your weapons while sprinting.\n\nYour weapons' magazine sizes are increased by an additional ##20%.##",
 
 			--Heavy Impact
@@ -437,8 +438,8 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			["menu_underdog_beta_sc"] = "Underdog",
 			["menu_underdog_beta_desc_sc"] = "BASIC: ##$basic##\nWhen three or more enemies are within ##18## meters of you, you receive a ##10%## damage bonus that lasts for ##7## seconds.\n\nACE: ##$pro##\nWhen three or more enemies are within ##18## meters of you, you also receive a ##10%## damage reduction that lasts for ##7## seconds.",																								
 
-			--Shotgun CQB	
-			["menu_shotgun_cqb_beta_sc"] = "Shotgun CQB",
+			--Snap Shot (formerly Shotgun CQB)
+			["menu_shotgun_cqb_beta_sc"] = "Snap Shot",
 			["menu_shotgun_cqb_beta_desc_sc"] = "BASIC: ##$basic##\nYou ADS ##50%## faster when using shotguns.\n\nACE: ##$pro##\nYou reload Shotguns ##25%## faster.",																								
 
 			--Shotgun Impact
@@ -449,8 +450,8 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			["menu_far_away_beta_sc"] = "Pigeon Shooter",
 			["menu_far_away_beta_desc_sc"] = "BASIC: ##$basic##\nYour shotgun's accuracy increased by ##40%## when aiming down your sights.\n\nACE: ##$pro##\nYour shotgun's range increased by ##50%## when aiming down your sights.",																																																																																																																																																																																																
 
-			--Gung Ho
-			["menu_close_by_beta_sc"] = "Gung-Ho",
+			--Slam-Fire (formerly Gung-Ho)
+			["menu_close_by_beta_sc"] = "Slam Fire",
 			["menu_close_by_beta_desc_sc"] = "BASIC: ##$basic##\nYou can now hip-fire with shotguns while sprinting.\n\nACE: ##$pro##\nYour rate of fire is increased by ##35%## while hip-firing with shotguns.",
 
 			--Overkill
@@ -476,7 +477,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--More Blood to Bleed--
 			["menu_iron_man_beta_sc"] = "More Blood to Bleed",
-			["menu_iron_man_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##20%## extra health.\n\nACE: ##$pro##\nYou gain an additional ##20%## extra health.",																								
+			["menu_iron_man_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##25%## extra health.\n\nACE: ##$pro##\nYou gain an additional ##25%## extra health.",																								
 
 			--Bullseye--
 			["menu_prison_wife_beta_sc"] = "Bullseye",
@@ -508,8 +509,8 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			["menu_ammo_2x_beta_sc"] = "Extra Lead",
 			["menu_ammo_2x_beta_desc_sc"] = "BASIC: ##$basic##\nEach ammo bag contains additional ##200%## ammunition.\n\nACE: ##$pro##\nYou can now place ##2## ammo bags instead of just one.",																								
 
-			--Carbon Blade
-			["menu_carbon_blade_beta_sc"] = "Carbon Blades",
+			--BONESAW IS READYYYYYYYY (formerly Carbon Blades)
+			["menu_carbon_blade_beta_sc"] = "Bonesaw",
 			["menu_carbon_blade_beta_desc_sc"] = "BASIC: ##$basic##\nReduces the wear down of the blades on enemies by ##50%.##\n\nACE: ##$pro##\nYou can now saw through shield enemies with your OVE9000 portable saw.\n\nWhen killing an enemy with the saw, you have a ##50%## chance to cause nearby enemies in a ##10## meter radius to panic. Panic will make enemies go into short bursts of uncontrollable fear.",																								
 
 			--Fully Loaded--
@@ -524,7 +525,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			--[[   ENGINEER SUBTREE   ]]--
 			--{
 	
-			--Defense Up
+			--Third Law
 			["menu_defense_up_beta_sc"] = "Third Law",
 			["menu_defense_up_beta_desc_sc"] = "BASIC: ##$basic##\nYour sentry guns cost ##25%## less ammunition to deploy.\n\nACE: ##$pro##\nYour sentry guns gain a protective shield.",
 
@@ -561,21 +562,46 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 			["menu_trip_mine_expert_beta_sc"] = "Danger Close",
 			["menu_combat_engineering_desc_sc"] = "BASIC: ##$basic##\nThe radius of trip mine explosion is increased by ##30%.##\n\nACE: ##$pro##\nYour trip mine deals ##50%## more damage.",																								
 
-			--More Firepower--
+			--Drill Sawgeant here--
+			
+			--Demoman--
 			["menu_more_fire_power_sc"] = "Demoman",
 			["menu_more_fire_power_desc_sc"] = "BASIC: ##$basic##\nYou can now carry ##4## shaped charges and ##6## trip mines.\n\nYou deploy shaped charges and trip mines ##20%## faster.\n\nACE: ##$pro##\nYou can now carry ##6## shaped charges and ##10## trip mines.\n\nYou deploy shaped charges and trip mines an additional ##20%## faster.",																								
 
-
-			--Kickstarter
+			--Kickstarter--
 			["menu_kick_starter_beta_desc_sc"] = "BASIC: ##$basic##\nYour drills and saws gain an additional ##20%## chance to automatically restart after breaking.\n\nACE: ##$pro##\nYou gain the ability to restart a drill by hitting it with a melee attack. You get ##1## chance for each time it breaks with a ##50%## success rate.",
 
-
+			--Fire Trap string placeholder--
+			
 			--}
 			
-			--[[  BATTLE SAPPER  SUBTREE   ]]--
+			--[[  BATTLE SAPPER SUBTREE  ]]--
 			--{
 			
-			
+			--Sharpshooter--
+			["menu_discipline_sc"] = "Sharpshooter",
+			["menu_discipline_desc_sc"] = "BASIC: ##$basic##\nYour weapon accuracy is increased with weapons set to semi-auto by ##10.##\n\nACE: ##$pro##\nYour weapon stability is increased with all rifles by ##8.##",
+
+			--Kilmer--	
+			["menu_heavy_impact_beta_sc"] = "Kilmer",
+			["menu_heavy_impact_beta_desc_sc"] = "BASIC: ##$basic##\nYour ADS speed with rifles is ##50%## faster.\n\nACE: ##$pro##\nYou reload rifles ##25%## faster.",
+
+			--Spotter--	
+			["menu_fast_fire_beta_sc"] = "Spotter",
+			["menu_fast_fire_beta_desc_sc"] = "BASIC: ##$basic##\nSpecial enemies marked by you take ##20%## more damage. You can also now automatically mark special enemies by ##scoping in## on them.\n\nACE: ##$pro##\nEnemies you mark take an additional ##25%## damage when further away than ##25## meters. Your marks on enemies last ##100%## longer.",																																																																																																																																																																																																																									
+
+			--Nerves of Steel--
+			["menu_kilmer_sc"] = "Nerves of Steel",
+			["menu_kilmer_desc_sc"] = "BASIC: ##$basic##\nYou take ##50%## less damage while interacting with objects.\n\nYou can now use steel sight while in bleedout.\n\nACE: ##$pro##\nYou can now reload your weapons while sprinting.\n\nYour weapon accuracy while moving with Assault Rifles and Sniper Rifles is increased by ##50%##",																																																																																																																																																																																																																									
+
+			--Ammo Efficiency--
+			["menu_single_shot_ammo_return_sc"] = "Ammo Efficiency",
+			["menu_single_shot_ammo_return_desc_sc"] = "BASIC: ##$basic##\nGetting ##3## killing headshots in less than ##6## seconds will grant ##1## ammo pickup to your used weapon. Can only be triggered by SMGs, Assault Rifles and Sniper Rifles fired in single shot mode.\n\nACE: ##$pro##\nGetting ##3## headshots in a row will grant ##1## ammo pickup for your used weapon. Can only be triggered by SMGs, Assault Rifles and Sniper Rifles fired in single shot mode.",																																																																																																																																																																																																																									
+
+			--Bulletproof--
+			["menu_iron_man_sc"] = "Bulletproof",
+			["menu_iron_man_desc_sc"] = "BASIC: ##$basic##\nYou gain ##35%## more armor.\n\nACE: ##$pro##\nYou gain ##15%## more armor.\n\nYour armor recovery rate is increased by ##15%.##",																																																																																																																																																																																																																									
+
 			--}
 		--}
 		
@@ -587,11 +613,30 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 
 			--}
 			
-			--[[   COMMANDO SUBTREE   ]]--
+			--[[   ARTFUL DODGER SUBTREE   ]]--
 			--{
 
+		--Duck and Cover--
+		["menu_sprinter_beta_sc"] = "Duck and Cover",
+		["menu_sprinter_beta_desc_sc"] = "BASIC: ##$basic##\nYour stamina starts regenerating ##25%## earlier and ##25%## faster.\n\nACE: ##$pro##\nYou have a ##10%## increased chance to dodge while sprinting.\n\nYou gain ##15%## chance to dodge while ziplining.",																								
 
-			
+		--Evasion--
+		["menu_awareness_beta_sc"] = "Evasion",
+		["menu_awareness_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##5%## additional movement speed and ##20%## ladder climbing speed.\n\nACE: ##$pro##\nYou gain ##10%## additional movement speed.\n\nYour fall damage is reduced by ##75%##.",																								
+
+		--Deep Pockets--
+		["menu_thick_skin_beta_sc"] = "Deep Pockets",
+		["menu_thick_skin_beta_desc_sc"] = "BASIC: ##$basic##\nIncreases the concealment of melee weapons by ##2.##\n\nACE: ##$pro##\nIncreases the armor of all ballistic vests by ##20.##\n\nIncreases the concealment of all ballistic vests by ##4.##",
+
+		--Moving Target--
+		["menu_dire_need_beta_sc"] = "Moving Target",
+		["menu_dire_need_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##1%## extra movement speed for every ##3## points of concealment under ##35##, up to ##15%.##\n\nACE: ##$pro##\nYou gain ##1%## extra movement speed for every ##1## point of concealment under ##35##, up to ##15%.##",																								
+
+		--Shockproof is missing in this file???--
+		
+		--So is Sneaky Bastard, guess they're unchanged strings--
+		--still putting these comments here for placemarkers just in case--
+		
 			--}
 			
 			--[[   SILENT KILLER SUBTREE   ]]--
@@ -633,39 +678,14 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 		--}
 	--}
 
-		--Deep Pockets--
-		["menu_thick_skin_beta_sc"] = "Deep Pockets",
-		["menu_thick_skin_beta_desc_sc"] = "BASIC: ##$basic##\nIncreases the concealment of melee weapons by ##2.##\n\nACE: ##$pro##\nIncreases the armor of all ballistic vests by ##20.##\n\nIncreases the concealment of all ballistic vests by ##4.##",
 
-		--Duck and Cover--
-		["menu_sprinter_beta_sc"] = "Duck and Cover",
-		["menu_sprinter_beta_desc_sc"] = "BASIC: ##$basic##\nYour stamina starts regenerating ##25%## earlier and ##25%## faster.\n\nACE: ##$pro##\nYou have a ##10%## increased chance to dodge while sprinting.\n\nYou gain ##15%## chance to dodge while ziplining.",																								
+		-- ["menu_tower_defense_beta_desc_sc"] = "BASIC: ##$basic##\nYou can now carry a maximum of ##2## sentry guns.\n\nACE: ##$pro##\nYou can now carry a maximum of ##3## sentry guns.",																								
 
-		["menu_tower_defense_beta_desc_sc"] = "BASIC: ##$basic##\nYou can now carry a maximum of ##2## sentry guns.\n\nACE: ##$pro##\nYou can now carry a maximum of ##3## sentry guns.",																								
 
-		--Sharpshooter--
-		["menu_discipline_sc"] = "Sharpshooter",
-		["menu_discipline_desc_sc"] = "BASIC: ##$basic##\nYour weapon accuracy is increased with weapons set to semi-auto by ##10.##\n\nACE: ##$pro##\nYour weapon stability is increased with all rifles by ##8.##",
 
-		--Kilmer--	
-		["menu_heavy_impact_beta_sc"] = "Kilmer",
-		["menu_heavy_impact_beta_desc_sc"] = "BASIC: ##$basic##\nYour ADS speed with rifles is ##50%## faster.\n\nACE: ##$pro##\nYou reload rifles ##25%## faster.",
 
-		--Spotter--	
-		["menu_fast_fire_beta_sc"] = "Spotter",
-		["menu_fast_fire_beta_desc_sc"] = "BASIC: ##$basic##\nSpecial enemies marked by you take ##20%## more damage. You can also now automatically mark special enemies by ##scoping in## on them.\n\nACE: ##$pro##\nEnemies you mark take an additional ##25%## damage when further away than ##25## meters. Your marks on enemies last ##100%## longer.",																																																																																																																																																																																																																									
 
-		--Nerves of Steel--
-		["menu_kilmer_sc"] = "Nerves of Steel",
-		["menu_kilmer_desc_sc"] = "BASIC: ##$basic##\nYou take ##50%## less damage while interacting with objects.\n\nYou can now use steel sight while in bleedout.\n\nACE: ##$pro##\nYou can now reload your weapons while sprinting.\n\nYour weapon accuracy while moving with Assault Rifles and Sniper Rifles is increased by ##50%##",																																																																																																																																																																																																																									
 
-		--Ammo Efficiency--
-		["menu_single_shot_ammo_return_sc"] = "Ammo Efficiency",
-		["menu_single_shot_ammo_return_desc_sc"] = "BASIC: ##$basic##\nGetting ##3## killing headshots in less than ##6## seconds will grant ##1## ammo pickup to your used weapon. Can only be triggered by SMGs, Assault Rifles and Sniper Rifles fired in single shot mode.\n\nACE: ##$pro##\nGetting ##3## headshots in a row will grant ##1## ammo pickup for your used weapon. Can only be triggered by SMGs, Assault Rifles and Sniper Rifles fired in single shot mode.",																																																																																																																																																																																																																									
-
-		--Bulletproof--
-		["menu_iron_man_sc"] = "Bulletproof",
-		["menu_iron_man_desc_sc"] = "BASIC: ##$basic##\nYou gain ##35%## more armor.\n\nACE: ##$pro##\nYou gain ##15%## more armor.\n\nYour armor recovery rate is increased by ##15%.##",																																																																																																																																																																																																																									
 
 		--Chameleon--
 		["menu_jail_workout_sc"] = "Chameleon",
@@ -687,13 +707,6 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Skills", function(loc)
 		["menu_ecm_2x_beta_sc"] = "ECM Specialist",
 		["menu_ecm_2x_beta_desc_sc"] = "BASIC: ##$basic##\nYou can now place ##2## ECM jammers instead of just one.\n\nACE: ##$pro##\nThe ECM jammer duration is increased by an additional ##25%## and the ECM feedback duration lasts ##25%## longer.\n\nPagers are delayed by the ECM jammer.",	
 																																																																																																																																																																																																																																															
-		--Evasion--
-		["menu_awareness_beta_sc"] = "Evasion",
-		["menu_awareness_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##5%## additional movement speed and ##20%## ladder climbing speed.\n\nACE: ##$pro##\nYou gain ##10%## additional movement speed.\n\nYour fall damage is reduced by ##75%##.",																								
-
-		--Moving Target--
-		["menu_dire_need_beta_sc"] = "Moving Target",
-		["menu_dire_need_beta_desc_sc"] = "BASIC: ##$basic##\nYou gain ##1%## extra movement speed for every ##3## points of concealment under ##35##, up to ##15%.##\n\nACE: ##$pro##\nYou gain ##1%## extra movement speed for every ##1## point of concealment under ##35##, up to ##15%.##",																								
 
 		--Optical Illusions--
 		["menu_optic_illusions_sc"] = "Optical Illusions",
@@ -867,7 +880,7 @@ Hooks:Add("LocalizationManagerPostInit", "SC_Localization_Perk_Decks", function(
 		["menu_deck17_9_desc_sc"] = "For every ##50## points of health gained during the injector effect while at maximum health, the recharge time of the injector is reduced by ##1## second.\n\nDeck Completion Bonus: Your chance of getting a higher quality item during a PAYDAY is increased by ##10%.##",
 
 		--10 feet higher--
-		["menu_deck18_1_desc_sc"] = "Your chance to dodge is increased by ##5%##.\n\nUnlocks and equips the throwable ##Smoke Bomb.##\n\nWhen deployed, the smoke bomb creates a smoke screen that lasts for ##12## seconds. While standing inside the smoke grenade, you and your allies automatically avoid ##10%## of all bullets. Any enemies that stand in the smoke will see their accuracy reduced by ##50%##.\n\nAfter the smoke dissipates, the Smoke Bomb is on a cooldown for ##30## seconds, but killing enemies will reduce this cooldown by ##1## second.",
+		["menu_deck18_1_desc_sc"] = "Your chance to dodge is increased by ##5%##.\n\nUnlocks and equips the throwable ##Smoke Bomb.##\n\nWhen deployed, the smoke bomb creates a smoke screen that lasts for ##12## seconds. While standing inside the smoke grenade, you and your allies automatically avoid ##50%## of all bullets. Any enemies that stand in the smoke will see their accuracy reduced by ##50%##.\n\nAfter the smoke dissipates, the Smoke Bomb is on a cooldown for ##30## seconds, but killing enemies will reduce this cooldown by ##1## second.",
 		["menu_deck18_9_desc_sc"] = "Smoke Bomb effects are increased by ##50%## while you or your allies are standing in the smoke screen.\n\nDeck Completion Bonus: Your chance of getting a higher quality item during a PAYDAY is increased by ##10%.##",
 
 		--Sweet liquor eases the pain--
